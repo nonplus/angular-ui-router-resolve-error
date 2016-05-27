@@ -1,6 +1,8 @@
 angular-ui-router-resolve-error
 ===============================
 
+[![Build Status](https://travis-ci.org/nonplus/angular-ui-router-resolve-error.svg?branch=master)](https://travis-ci.org/nonplus/angular-ui-router-resolve-error)
+
 AngularJS module for logging an error to console when `resolve` does not find dependency to inject.
 
 Motivation
