@@ -89,4 +89,33 @@ describe('angular-ui-resolve-error', function() {
 		}));
 	});
 
+	describe("when $stateChangeError error", function() {
+
+		function stateChangeError($rootScope, error) {
+			$rootScope.$broadcast('$stateChangeError', "toState", {}, null, null, error);
+		}
+
+		describe("is undefined", function() {
+			it("should NOT log an error", inject(function($state, $rootScope, $q) {
+				stateChangeError($rootScope);
+				expect(console.error).not.toHaveBeenCalled();
+			}));
+		});
+
+		describe("has no message property", function() {
+			it("should NOT log an error", inject(function($state, $rootScope, $q) {
+				stateChangeError($rootScope, {});
+				expect(console.error).not.toHaveBeenCalled();
+			}));
+		});
+
+		describe("has a non-String message property", function() {
+			it("should NOT log an error", inject(function($state, $rootScope, $q) {
+				stateChangeError($rootScope, { message: 123 });
+				expect(console.error).not.toHaveBeenCalled();
+			}));
+		});
+
+	});
+
 });
