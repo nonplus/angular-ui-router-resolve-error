@@ -3,7 +3,7 @@
  *
  * @link https://github.com/nonplus/angular-ui-router-resolve-error#readme
  *
- * @license angular-ui-router-resolve-error v0.0.0
+ * @license angular-ui-router-resolve-error v0.0.1
  * (c) Copyright Stepan Riha <github@nonplus.net>
  * License MIT
  */
